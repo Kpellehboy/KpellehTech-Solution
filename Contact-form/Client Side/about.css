@@ -1,0 +1,164 @@
+
+/* Internal CSS for styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
+    margin: 5px;
+    padding: 5px;
+}
+
+.navbar .brand-title {
+    display: inline-block;
+    font-size: 22px;
+    padding: 14px 20px;
+    color:red;
+
+}
+
+.navbar .navbar-links {
+    float: right;
+}
+
+.navbar .navbar-links ul {
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+}
+
+.navbar .navbar-links ul li {
+    display: inline;
+    padding: 14px 20px;
+}
+
+.navbar .navbar-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.navbar .toggle-button {
+    display: none;
+    font-size: 26px;
+    color: #fff;
+    padding: 14px 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+    max-width: 900px;
+    margin: 40px auto; /* Add margin to avoid being hidden by the navbar */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    padding: 10px;
+}
+
+aside {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+    flex: 1;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px; /* Ensure consistent height */
+    object-fit: cover; /* Ensures images fill the container properly */
+    border-radius: 50%; /* Make images circular */
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+h2, h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 18px;
+    color: #555;
+}
+
+p strong {
+    color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar .navbar-links ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar .toggle-button {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar .navbar-links.active {
+        display: block;
+    }
+
+    .team-container {
+        flex-direction: column; /* Stack team members on smaller screens */
+        align-items: center; /* Center align */
+    }
+
+    .team-member {
+        margin: 20px 0; /* Add vertical margin for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px; /* Adjust header size for smaller screens */
+    }
+
+    p {
+        font-size: 16px; /* Adjust paragraph size for smaller screens */
+    }
+
+    .team-member img {
+        width: 100px; /* Reduce width for team member images on small screens */
+        height: 100px;
+    }
+}

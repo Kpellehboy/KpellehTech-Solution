@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KpellehTech |contact-form</title>
+    <link rel="stylesheet" href="form.css">
+     <!-- Font Awesome for icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand-title"><b><i>KpellehTech</i> <span>Solutions</span></b></div>
+        <a href="javascript:void(0);" class="toggle-button" onclick="toggleMenu()">&#9776;</a>
+        <div class="navbar-links" id="navbar-links">
+            <ul>
+                <li><a href="../Client Side/index.html">Home</a></li>
+                <li><a href="../Client Side/about.html">About</a></li>
+                <li><a href="../Client Side/service.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+  
+    <div class="container">
+        <form action="/post" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name..." required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email..." required>
+
+            <label for="number">Contact:</label>
+            <input type="text" id="number" name="number" placeholder="Enter your number" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+
+        <footer class="footer">
+            <p>Connect with us on</p>
+            <a href="https://www.facebook.com/elijah.flomo.98" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/+2310880207781" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </footer>
+    
+       <script src="contact.js"></script>
+    </div>
+</body>
+
+</html>
